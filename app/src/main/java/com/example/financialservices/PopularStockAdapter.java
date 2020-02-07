@@ -16,10 +16,19 @@ public class PopularStockAdapter extends RecyclerView.Adapter<PopularStockAdapte
     private View.OnClickListener listener;
     private Context context;
     private ArrayList<MostGainerStock> mostGainerStocks;
+    private ArrayList<MostLoserStock> mostLoserStocks;
+    int test;
 
     public PopularStockAdapter(ArrayList<MostGainerStock> mostGainerStocks, Context context ) {
         this.context = context;
         this.mostGainerStocks=mostGainerStocks;
+    }
+
+    public PopularStockAdapter(ArrayList<MostLoserStock> mostLoserStocks,Context context,int test)
+    {
+        this.context=context;
+        this.mostLoserStocks=mostLoserStocks;
+        this.test=test;
     }
 
     @NonNull

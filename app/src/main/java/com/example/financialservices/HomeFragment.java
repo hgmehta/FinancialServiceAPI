@@ -16,6 +16,7 @@ import retrofit2.Response;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -24,13 +25,17 @@ import java.util.ArrayList;
 public class HomeFragment extends Fragment {
 
     PopularStockAdapter popularStockAdapter;
-    ArrayList<StockMarketHours> tradingHoursArray;
+    StockMarketHours tradingHoursArray;
     View layoutView;
+    TextView openingHours,closingHours;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         layoutView = view;
+
+        openingHours=view.findViewById(R.id.textView_openingHour);
+        closingHours=view.findViewById(R.id.textView_ClosingHour);
 
         iDataService service = RetrofitClient.getRetrofitInstance().create(iDataService.class);
 
@@ -43,8 +48,12 @@ public class HomeFragment extends Fragment {
                 TradingHours tradingHours = response.body();
 
                 try {
-                    tradingHoursArray = new ArrayList<>(tradingHours.getStockMarketHours());
-                    generateRecyclerView(layoutView, tradingHoursArray);
+                    tradingHoursArray = tradingHours.getStockMarketHours();
+                    openingHours.setText(tradingHoursArray.getOpeningHour());
+                    closingHours.setText(tradingHoursArray.getClosingHour());
+
+
+
                 } catch (NullPointerException exception) {
 
                 }
@@ -58,16 +67,7 @@ public class HomeFragment extends Fragment {
         });
     }
 
-    public void generateRecyclerView(View view,ArrayList<StockMarketHours> stockMarketHours){
-        popularStockAdapter = new PopularStockAdapter(stockMarketHours, getActivity().getApplicationContext(),true);
 
-        LinearLayoutManager manager = new LinearLayoutManager(getActivity().getApplicationContext(), LinearLayoutManager.VERTICAL, false);
-
-        RecyclerView recyclerView = view.findViewById(R.id.recycle_most_gainers);
-
-        recyclerView.setLayoutManager(manager);
-        recyclerView.setAdapter(popularStockAdapter);
-    }
 
 
     public HomeFragment() {
