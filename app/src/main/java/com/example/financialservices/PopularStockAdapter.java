@@ -33,7 +33,10 @@ public class PopularStockAdapter extends RecyclerView.Adapter<PopularStockAdapte
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        holder.stockName.setText(this.mostGainerStocks.get(position).getTicker());
+        holder.companyName.setText(this.mostGainerStocks.get(position).getCompanyName());
+        holder.tickerName.setText(this.mostGainerStocks.get(position).getTicker());
+        holder.stockPrice.setText("$" + this.mostGainerStocks.get(position).getPrice());
+        holder.priceChanges.setText(this.mostGainerStocks.get(position).getChanges().toString() + this.mostGainerStocks.get(position).getChangesPercentage());
     }
 
     @Override
@@ -43,13 +46,18 @@ public class PopularStockAdapter extends RecyclerView.Adapter<PopularStockAdapte
 
     public class ViewHolder extends RecyclerView.ViewHolder
     {
-        TextView stockName;
+        TextView companyName;
+        TextView tickerName;
+        TextView priceChanges;
+        TextView stockPrice;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            stockName = itemView.findViewById(R.id.MG_Companyname);
-
+            companyName = itemView.findViewById(R.id.MG_Companyname);
+            tickerName = itemView.findViewById(R.id.MG_ticker);
+            priceChanges = itemView.findViewById(R.id.MG_Changes);
+            stockPrice = itemView.findViewById(R.id.MG_Stockprices);
             itemView.setTag(this);
             itemView.setOnClickListener(listener);
 
