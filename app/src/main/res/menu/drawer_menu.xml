@@ -4,17 +4,17 @@
     <group
         android:checkableBehavior="single">
         <item android:id="@+id/first"
-            android:title="First fragment"
+            android:title="Home"
             android:icon="@drawable/ic_launcher_background">
         </item>
 
         <item android:id="@+id/second"
-            android:title="Second fragment"
+            android:title="Most Gainers"
             android:icon="@drawable/ic_launcher_background">
         </item>
 
         <item android:id="@+id/third"
-            android:title="Third fragment"
+            android:title="Most Losers"
             android:icon="@drawable/ic_launcher_background">
         </item>
     </group>
