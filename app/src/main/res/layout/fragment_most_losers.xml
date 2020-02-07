@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MostLosers">
-
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
 
         <TextView
@@ -20,118 +15,14 @@
             android:textSize="35dp"
             android:layout_marginTop="35dp"/>
 
-        <TextView
-            android:id="@+id/textView_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Comapny Name"
-            android:layout_below="@id/textView_intro1"
-            android:layout_marginTop="25dp"
-            android:textSize="20dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_marginLeft="30dp"/>
-
-        <TextView
-            android:id="@+id/textView_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Stock prices"
-            android:layout_below="@id/textView_1"
-            android:layout_marginTop="25dp"
-            android:textSize="20dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_marginLeft="30dp"/>
-
-        <TextView
-            android:id="@+id/textView_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Changes"
-            android:layout_below="@id/textView_2"
-            android:layout_marginTop="25dp"
-            android:textSize="20dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_marginLeft="30dp"/>
-
-        <TextView
-            android:id="@+id/textView_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ChangesPercentage"
-            android:layout_below="@id/textView_3"
-            android:layout_marginTop="25dp"
-            android:textSize="20dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_marginLeft="30dp"/>
-
-        <TextView
-            android:id="@+id/textView_5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ticker"
-            android:layout_below="@id/textView_4"
-            android:layout_marginTop="25dp"
-            android:textSize="20dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_marginLeft="30dp"/>
 
 
-        <TextView
-            android:id="@+id/ML_Companyname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Comapny Name"
-            android:layout_below="@id/textView_intro1"
-            android:layout_marginTop="25dp"
-            android:textSize="20dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_marginLeft="230dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/textView_intro1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
 
+        android:id="@+id/recycle_most_losers"
+        />
 
-        <TextView
-            android:id="@+id/ML_Stockprices"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Stockprices"
-            android:layout_below="@id/ML_Companyname"
-            android:layout_marginTop="25dp"
-            android:textSize="20dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_marginLeft="230dp"/>
-
-        <TextView
-            android:id="@+id/ML_Changes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="changes"
-            android:layout_below="@id/ML_Stockprices"
-            android:layout_marginTop="25dp"
-            android:textSize="20dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_marginLeft="230dp"/>
-
-        <TextView
-            android:id="@+id/ML_ChangesPercentage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ChangePercentage"
-            android:layout_below="@id/ML_Changes"
-            android:layout_marginTop="25dp"
-            android:textSize="20dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_marginLeft="230dp"/>
-
-        <TextView
-            android:id="@+id/ML_ticker"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ticker"
-            android:layout_below="@id/ML_ChangesPercentage"
-            android:layout_marginTop="25dp"
-            android:textSize="20dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_marginLeft="230dp"/>
-
-    </RelativeLayout>
-
-</FrameLayout>
+</RelativeLayout>

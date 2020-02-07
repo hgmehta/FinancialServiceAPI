@@ -18,17 +18,23 @@ public class PopularStockAdapter extends RecyclerView.Adapter<PopularStockAdapte
     private ArrayList<MostGainerStock> mostGainerStocks;
     private ArrayList<MostLoserStock> mostLoserStocks;
     int test;
+    int size = 0;
+    boolean isGainer = false;
 
     public PopularStockAdapter(ArrayList<MostGainerStock> mostGainerStocks, Context context ) {
         this.context = context;
+        isGainer = true;
         this.mostGainerStocks=mostGainerStocks;
+        size = mostGainerStocks.size();
     }
 
     public PopularStockAdapter(ArrayList<MostLoserStock> mostLoserStocks,Context context,int test)
     {
+        isGainer = false;
         this.context=context;
         this.mostLoserStocks=mostLoserStocks;
         this.test=test;
+        size = mostLoserStocks.size();
     }
 
     @NonNull
@@ -42,15 +48,22 @@ public class PopularStockAdapter extends RecyclerView.Adapter<PopularStockAdapte
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        holder.companyName.setText(this.mostGainerStocks.get(position).getCompanyName());
-        holder.tickerName.setText(this.mostGainerStocks.get(position).getTicker());
-        holder.stockPrice.setText("$" + this.mostGainerStocks.get(position).getPrice());
-        holder.priceChanges.setText(this.mostGainerStocks.get(position).getChanges().toString() + this.mostGainerStocks.get(position).getChangesPercentage());
+        if(isGainer){
+            holder.companyName.setText(this.mostGainerStocks.get(position).getCompanyName());
+            holder.tickerName.setText(this.mostGainerStocks.get(position).getTicker());
+            holder.stockPrice.setText("$" + this.mostGainerStocks.get(position).getPrice());
+            holder.priceChanges.setText(this.mostGainerStocks.get(position).getChanges().toString() + this.mostGainerStocks.get(position).getChangesPercentage());
+        }else{
+            holder.companyName.setText(this.mostLoserStocks.get(position).getCompanyName());
+            holder.tickerName.setText(this.mostLoserStocks.get(position).getTicker());
+            holder.stockPrice.setText("$" + this.mostLoserStocks.get(position).getPrice());
+            holder.priceChanges.setText(this.mostLoserStocks.get(position).getChanges().toString() + this.mostLoserStocks.get(position).getChangesPercentage());
+        }
     }
 
     @Override
     public int getItemCount() {
-        return mostGainerStocks.size();
+        return size;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder

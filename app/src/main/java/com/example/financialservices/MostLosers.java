@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import retrofit2.Call;
@@ -63,9 +64,10 @@ public class MostLosers extends Fragment {
     public void generateRecyclerView(View view,ArrayList<MostLoserStock> mostLoserStocks){
         popularStockAdapter = new PopularStockAdapter(mostLoserStocks, getActivity().getApplicationContext(),0);
 
-        LinearLayoutManager manager = new LinearLayoutManager(getActivity().getApplicationContext(), LinearLayoutManager.VERTICAL, false);
+        GridLayoutManager manager = new GridLayoutManager(getActivity().getApplicationContext(),2);
+        //LinearLayoutManager manager = new LinearLayoutManager(getActivity().getApplicationContext(), LinearLayoutManager.VERTICAL, false);
 
-        RecyclerView recyclerView = view.findViewById(R.id.recycle_most_gainers);
+        RecyclerView recyclerView = view.findViewById(R.id.recycle_most_losers);
 
         recyclerView.setLayoutManager(manager);
         recyclerView.setAdapter(popularStockAdapter);
