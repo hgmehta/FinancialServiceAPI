@@ -11,6 +11,10 @@ public interface iDataService {
 
     @GET("stock/losers")
     Call<MostLoser> getMostLoser ();
+
+    @GET("is-the-market-open")
+    Call<TradingHours> getTradingHours ();
+
 }
 
 
