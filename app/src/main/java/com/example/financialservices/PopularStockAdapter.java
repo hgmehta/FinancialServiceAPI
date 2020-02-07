@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -11,6 +13,12 @@ public class PopularStockAdapter extends RecyclerView.Adapter<PopularStockAdapte
 
     private View.OnClickListener listener;
     private Context context;
+    private ArrayList<MostGainerStock> mostGainerStocks;
+
+    public PopularStockAdapter(ArrayList<MostGainerStock> mostGainerStocks, Context context ) {
+        this.context = context;
+        this.mostGainerStocks=mostGainerStocks;
+    }
 
     @NonNull
     @Override
