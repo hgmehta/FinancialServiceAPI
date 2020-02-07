@@ -43,9 +43,8 @@ public class MostGainers extends Fragment {
                 MostGainer mostGainer=response.body();
 
                 try {
-
-                        mostGainerStocks=new ArrayList<>(mostGainer.getMostGainerStock());
-                        generateRecyclerView(layoutView,mostGainerStocks);
+                    mostGainerStocks=new ArrayList<>(mostGainer.getMostGainerStock());
+                    generateRecyclerView(layoutView,mostGainerStocks);
                 }catch (NullPointerException exception){
 
                 }
