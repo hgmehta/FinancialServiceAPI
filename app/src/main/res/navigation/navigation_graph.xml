@@ -23,6 +23,6 @@
     <fragment
         android:id="@+id/companyInfoFragment"
         android:name="com.example.financialservices.CompanyInfoFragment"
-        android:label="fragment_company_info"
+        android:label="Company Info"
         tools:layout="@layout/fragment_company_info" />
 </navigation>

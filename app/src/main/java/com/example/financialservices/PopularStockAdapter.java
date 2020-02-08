@@ -66,6 +66,11 @@ public class PopularStockAdapter extends RecyclerView.Adapter<PopularStockAdapte
         return size;
     }
 
+    public void setOnItemClickListner(View.OnClickListener itemClickListner)
+    {
+        listener = itemClickListner;
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder
     {
         TextView companyName;
@@ -82,9 +87,6 @@ public class PopularStockAdapter extends RecyclerView.Adapter<PopularStockAdapte
             stockPrice = itemView.findViewById(R.id.MG_Stockprices);
             itemView.setTag(this);
             itemView.setOnClickListener(listener);
-
-
-
         }
     }
 }
