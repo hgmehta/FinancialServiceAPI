@@ -62,8 +62,8 @@
            android:textColor="@color/colorAccent"
            android:layout_below="@id/textView"
            android:textSize="20dp"
+           android:layout_toRightOf="@+id/textView_11"
            android:layout_marginTop="20dp"
-           android:layout_marginLeft="220dp"
            android:textAlignment="center"/>
 
        <TextView
@@ -75,7 +75,7 @@
            android:layout_below="@id/textView_openingHour"
            android:textSize="20dp"
            android:layout_marginTop="20dp"
-           android:layout_marginLeft="220dp"
+           android:layout_toRightOf="@+id/textView_12"
            android:textAlignment="center"/>
 
    </RelativeLayout>
