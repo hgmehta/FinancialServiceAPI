@@ -12,13 +12,15 @@
         android:text="Most Gainer Stock prices"
         android:layout_centerHorizontal="true"
         android:textSize="35dp"
+        android:textColor="@color/colorAccent"
         android:layout_marginTop="10dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_below="@+id/textView_intro"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/recycle_most_gainers" />
+        android:id="@+id/recycle_most_gainers"
+        android:layout_marginTop="15dp"/>
 
 </RelativeLayout>
 

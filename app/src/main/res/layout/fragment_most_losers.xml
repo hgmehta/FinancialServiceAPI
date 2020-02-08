@@ -13,6 +13,7 @@
             android:text="Most Loser Stock prices"
             android:layout_centerHorizontal="true"
             android:textSize="35dp"
+            android:textColor="@color/colorAccent"
             android:layout_marginTop="35dp"/>
 
 
@@ -21,6 +22,7 @@
         android:layout_below="@+id/textView_intro1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
 
         android:id="@+id/recycle_most_losers"
         />

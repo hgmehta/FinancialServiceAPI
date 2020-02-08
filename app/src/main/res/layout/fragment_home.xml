@@ -13,9 +13,9 @@
 
        <ImageView
            android:id="@+id/imageView_logo"
-           android:layout_width="wrap_content"
+           android:layout_width="match_parent"
            android:layout_height="300dp"
-           android:src="@drawable/logo" />
+           android:src="@drawable/splashscreenlogo" />
 
        <TextView
            android:id="@+id/textView"
@@ -24,7 +24,7 @@
            android:text="Welcome to NYSE stock exchange"
            android:layout_below="@id/imageView_logo"
            android:layout_centerHorizontal="true"
-           android:textColor="@color/colorPrimary"
+           android:textColor="@color/colorAccent"
            android:textSize="25dp"
            android:layout_marginTop="20dp"
            />
@@ -34,6 +34,7 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:text="Opening Hour :"
+           android:textColor="@android:color/black"
            android:layout_below="@id/textView"
            android:textSize="20dp"
            android:layout_marginTop="20dp"
@@ -47,6 +48,7 @@
            android:text="Closing Hour :"
            android:layout_below="@id/textView_11"
            android:textSize="20dp"
+           android:textColor="@android:color/black"
            android:layout_marginTop="20dp"
            android:layout_marginLeft="80dp"
            android:textAlignment="center"/>
@@ -56,6 +58,7 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:text="9.45 AM"
+           android:textColor="@color/colorAccent"
            android:layout_below="@id/textView"
            android:textSize="20dp"
            android:layout_marginTop="20dp"
@@ -66,6 +69,7 @@
            android:id="@+id/textView_ClosingHour"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
+           android:textColor="@color/colorAccent"
            android:text="9.45 AM"
            android:layout_below="@id/textView_openingHour"
            android:textSize="20dp"
