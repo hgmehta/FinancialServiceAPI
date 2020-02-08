@@ -20,4 +20,9 @@
         android:name="com.example.financialservices.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/companyInfoFragment"
+        android:name="com.example.financialservices.CompanyInfoFragment"
+        android:label="fragment_company_info"
+        tools:layout="@layout/fragment_company_info" />
 </navigation>
