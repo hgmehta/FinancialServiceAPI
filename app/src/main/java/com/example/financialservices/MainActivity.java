@@ -8,9 +8,12 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -59,19 +62,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (id)
         {
             case R.id.first:
-                Toast.makeText(getApplicationContext(),"First Clicked",Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(),"Home",Toast.LENGTH_LONG).show();
                 navController.navigate(R.id.homeFragment);
                 break;
 
 
             case R.id.second:
-                Toast.makeText(getApplicationContext(),"Second Clicked",Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(),"Second Clicked",Toast.LENGTH_LONG).show();
                 navController.navigate(R.id.mostGainers);
                 break;
 
 
             case R.id.third:
-                Toast.makeText(getApplicationContext(),"Third Clicked",Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(),"Third Clicked",Toast.LENGTH_LONG).show();
                 navController.navigate(R.id.mostLosers);
                 break;
         }

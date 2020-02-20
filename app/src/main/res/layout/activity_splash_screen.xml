@@ -13,10 +13,11 @@
         android:layout_width="339dp"
         android:layout_height="299dp"
         android:layout_marginTop="100dp"
-        android:src="@drawable/logo"
+        android:src="@drawable/splashscreenlogo"
         android:layout_marginHorizontal="35dp"/>
 
     <ProgressBar
+        android:layout_marginTop="20dp"
         android:id="@+id/simpleProgressBar"
         android:layout_width="60dp"
         android:layout_height="60dp"

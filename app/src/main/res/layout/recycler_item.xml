@@ -1,130 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="170dp"
+    android:padding="5dp"
+    android:background="@android:color/white"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    app:cardCornerRadius="10dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="170dp"
+        android:layout_height="170dp">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/MG_Companyname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Comapny Name"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/MG_Stockprices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/MG_Companyname"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:text="Stockprices"
+
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/MG_Changes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/MG_Stockprices"
+           android:layout_centerVertical="true"
+            android:text="Changes"
+            android:textSize="15sp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorAccent" />
 
 
-    <TextView
-        android:id="@+id/textView_intro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Most Gainer Stock prices"
-        android:layout_centerHorizontal="true"
-        android:textSize="35dp"
-        android:layout_marginTop="35dp"/>
+        <TextView
+            android:id="@+id/MG_ticker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/MG_Changes"
+            android:layout_centerVertical="true"
+            android:text="ticker"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
 
-    <TextView
-        android:id="@+id/textView_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Comapny Name"
-        android:layout_below="@id/textView_intro"
-        android:layout_marginTop="25dp"
-        android:textSize="20dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_marginLeft="30dp"/>
-
-    <TextView
-        android:id="@+id/textView_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Stock prices"
-        android:layout_below="@id/textView_1"
-        android:layout_marginTop="25dp"
-        android:textSize="20dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_marginLeft="30dp"/>
-
-    <TextView
-        android:id="@+id/textView_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Changes"
-        android:layout_below="@id/textView_2"
-        android:layout_marginTop="25dp"
-        android:textSize="20dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_marginLeft="30dp"/>
-
-    <TextView
-        android:id="@+id/textView_4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ChangesPercentage"
-        android:layout_below="@id/textView_3"
-        android:layout_marginTop="25dp"
-        android:textSize="20dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_marginLeft="30dp"/>
-
-    <TextView
-        android:id="@+id/textView_5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ticker"
-        android:layout_below="@id/textView_4"
-        android:layout_marginTop="25dp"
-        android:textSize="20dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_marginLeft="30dp"/>
-
-
-    <TextView
-        android:id="@+id/MG_Companyname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Comapny Name"
-        android:layout_below="@id/textView_intro"
-        android:layout_marginTop="25dp"
-        android:textSize="20dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_marginLeft="230dp"/>
-
-
-    <TextView
-        android:id="@+id/MG_Stockprices"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Stockprices"
-        android:layout_below="@id/MG_Companyname"
-        android:layout_marginTop="25dp"
-        android:textSize="20dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_marginLeft="230dp"/>
-
-    <TextView
-        android:id="@+id/MG_Changes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="changes"
-        android:layout_below="@id/MG_Stockprices"
-        android:layout_marginTop="25dp"
-        android:textSize="20dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_marginLeft="230dp"/>
-
-    <TextView
-        android:id="@+id/MG_ChangesPercentage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ChangePercentage"
-        android:layout_below="@id/MG_Changes"
-        android:layout_marginTop="25dp"
-        android:textSize="20dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_marginLeft="230dp"/>
-
-    <TextView
-        android:id="@+id/MG_ticker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ticker"
-        android:layout_below="@id/MG_ChangesPercentage"
-        android:layout_marginTop="25dp"
-        android:textSize="20dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_marginLeft="230dp"/>
-
-</RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
