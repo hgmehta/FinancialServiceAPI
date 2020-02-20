@@ -68,7 +68,7 @@ public class MostGainers extends Fragment {
 
         recyclerView.setLayoutManager(manager);
         recyclerView.setAdapter(popularStockAdapter);
-    }
+}
 
 
     public MostGainers() {
